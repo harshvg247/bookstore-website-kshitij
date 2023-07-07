@@ -19,8 +19,10 @@
 body {
   background-color: var(--col-2);
   scroll-behavior: smooth;
-  
-}
+  }
+
+
+
 button {
   cursor: pointer;
 }
@@ -31,7 +33,6 @@ a {
 .navbar {
   display: flex;
   position: relative;
-  overflow: hidden;
   height: 100px;
   background-color: var(--col-1);
 }
@@ -48,13 +49,31 @@ a {
 .navlist-mobile{
   background-color: rgb(147, 40, 201, 0.9);
   list-style: none;
-  display: none;
+  display:none;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
   width: 100%;
   flex-wrap: wrap;
   z-index: 2;
+}
+#menu-button{
+  z-index: 3;
+}
+#menu-button{
+  display: none;
+}
+#menu-button:checked~.dropdown{
+  display: none;
+}
+.dropdown{
+  position: absolute;
+  top: 100px;
+  background-color: var(--col-2);
+  width: 100%;
+  z-index: 4;
+}
+.dropdown ul{
+  list-style: none;
 }
 .navbar li {
   margin: 0.8rem;
@@ -462,4 +481,14 @@ textarea{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+@media (max-width:600px){
+  .navlist{
+    display: none;
+  }
+  .navlist-mobile{
+    display: flex;
+  }
 }
