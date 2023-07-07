@@ -1,13 +1,8 @@
+
 :root {
-  --col-1: rgb(147, 40, 201);
-  --col-2: rgb(209, 170, 245);
-  --col-3: rgb(255, 255, 255);
-  --col-4: rgb(0, 0, 0);
-  --col-5: rgba(255, 255, 255, 0.78);
-  --col-6: rgb(47, 41, 41);
-  --col-7: rgb(169, 108, 199);
-  --col-8: yellow;
+  
 }
+
 * {
   box-sizing: border-box;
   margin: 0%;
@@ -19,6 +14,14 @@
 body {
   background-color: var(--col-2);
   scroll-behavior: smooth;
+  --col-1: rgb(147, 40, 201);
+  --col-2: rgb(209, 170, 245);
+  --col-3: rgb(255, 255, 255);
+  --col-4: rgb(0, 0, 0);
+  --col-5: rgba(255, 255, 255, 0.78);
+  --col-6: rgb(47, 41, 41);
+  --col-7: rgb(169, 108, 199);
+  --col-8: yellow;
   }
 
 
@@ -194,12 +197,13 @@ a {
 .card {
   max-height: 400px;
   height: 58vh;
-  width: 150px;
+  width: 160px;
   margin: 1rem 0.5rem 0rem 0.5rem;
   box-shadow: 0px 1px 5px 1px var(--col-4);
   background-color: var(--col-3);
   position: relative;
 }
+
 .card .type{
     position: absolute;
     right: -.8rem;
@@ -386,7 +390,7 @@ hr{
 }
 
 .review-card .review-text{
-  font-size: .9rem;
+  font-size: .8rem;
 }
 .review-card .name{
   margin-top: 10px;
@@ -490,5 +494,10 @@ textarea{
   }
   .navlist-mobile{
     display: flex;
+  }
+}
+@media (min-width:601px) {
+  .dropdown{
+    display: none;
   }
 }
